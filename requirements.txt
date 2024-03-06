@@ -1,0 +1,6 @@
+pre-commit==3.6.2
+flake8                     # code linter
+isort                      # code fomatter
+black                     # code fomatter
+pytest                     # unit test framework
+mypy                              # static code checker
