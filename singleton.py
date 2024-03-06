@@ -3,6 +3,8 @@
 
 # 单例模式,   一种锁
 class Singleton:
+    """"""
+
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, "_instance"):
             # 调用父类new创建实例
@@ -11,6 +13,8 @@ class Singleton:
 
 
 class Myclass(Singleton):
+    """"""
+
     def __init__(self, a):
         self.a = a
 
