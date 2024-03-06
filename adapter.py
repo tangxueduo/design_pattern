@@ -7,22 +7,30 @@ from abc import ABCMeta, abstractmethod
 
 
 class Payment(metaclass=ABCMeta):
+    """"""
+
     @abstractmethod
     def pay(self, money):
         pass
 
 
 class AliPay(Payment):
+    """"""
+
     def pay(self, money):
         return f"cost {money}"
 
 
 class JDPay(Payment):
+    """"""
+
     def pay(self, money):
         return f"cost {money}"
 
 
 class WechatPay(Payment):
+    """"""
+
     def cost(self, money):
         return f"cost {money}"
 
@@ -39,8 +47,11 @@ class WechatPay(Payment):
 
 # 方法二： 对象适配器，使用组合
 class PaymentAdapter(Payment):
+    """对象适配器，使用组合"""
+
     def __init__(self, payment):
         self.payment = payment
 
     def pay(self, money):
+        """pay money"""
         return self.payment.cost(money)
